@@ -12,14 +12,32 @@ description: Name, version, status, attach and hand off career documents, and re
 
 ## Naming
 
-- `Employer_Position_DocumentType_vX.Y_STATUS.extension`, for example `Acme_Learning-Program-Manager_Resume_v1.0_DRAFT.pdf`.
-- Base resumes: `Base_Track_Resume_vX.Y_STATUS.extension`.
+Each employer has its own folder, so documents for several positions at one employer stay together:
+
+```
+deliverables/<Employer>/<Position>_<CODE>_v<N>.<extension>
+deliverables/base/<Track>_RES_v<N>.<extension>
+```
+
+For example, `deliverables/Acme/Learning-Program-Manager_RES_v1.pdf` and its source `Learning-Program-Manager_RES_v1.docx`.
+
+| Code | Document |
+| --- | --- |
+| `RES` | Resume |
+| `CL` | Cover letter |
+| `ANS` | Application answers |
+| `LI` | LinkedIn content |
+
+- **Employer:** the employer's common name, for example `Acme` or `Blue-Origin`.
+- **Position:** the title as posted, without requisition numbers. If two postings at one employer share a title, add a short distinguisher (location or requisition ID), for example `Program-Manager-Denver`.
 - No spaces or special characters; hyphens inside a name part, underscores between parts.
+- For a document type with no code, use a short descriptive word (for example `Thank-You`) and propose a new code to the operator.
+- The status is never part of the filename, so a file is not renamed when its status changes. It is recorded on the issue and in the employer folder's `INDEX.md` (see Acceptance record).
 - Never put the client's name in a filename unless the client asks for it.
 
 ## Versions
 
-- Start at `v1.0`. Increment the minor version for revisions, the major version for substantial restructuring or a new approved baseline.
+- Start at `v1`. Increment for every revision (`v2`, `v3`, …).
 - Keep prior versions unless the client authorizes removal. Never overwrite an approved document with an unapproved revision.
 - Keep an editable source for every document.
 
@@ -48,7 +66,9 @@ An assignment is not complete until the document and its review information are 
 
 ## Acceptance record (Maestro)
 
-Use `templates/review-record.md` on the issue. When accepting, commit the document to `client:deliverables/` (resumes in `deliverables/resumes/`, base resumes in `deliverables/base/`) with its status in the filename (see `client-repo-maintenance`), and link the commit.
+Use `templates/review-record.md` on the issue. When accepting, commit the PDF and its editable source to the employer folder (`client:deliverables/<Employer>/`, or `deliverables/base/` for base resumes) following `client-repo-maintenance`, and link the commit.
+
+Each folder has an `INDEX.md` that you keep current, newest first, using `templates/index.md`. Add a row when you commit a document, and update its status in the same way when the client approves it, so the repository always shows each file's current status.
 
 ## Stop and ask
 

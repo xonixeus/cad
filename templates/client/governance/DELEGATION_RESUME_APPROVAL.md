@@ -16,7 +16,7 @@ After Scribe drafts a resume, Maestro reviews it against every requirement and e
 2. Every material claim (metrics, titles, dates, credentials) maps in Scribe's claim map to a row in `knowledge/CLAIMS_LEDGER.md` that is Verified with Use `Resume`, and respects that row's Limits. A Pending claim cannot be used; it goes to the client as a question.
 3. The PDF is produced and validated: page count, page size, embedded fonts, text extraction, and ATS-safe layout.
 4. Any gap against the posting is disclosed in the approval record.
-5. The approval is recorded on the Multica issue with the filename, version and checks, and the approved resume is committed to `deliverables/resumes/`.
+5. The approval is recorded on the Multica issue with the filename, version and checks, and the approved resume is committed to the employer's folder in `deliverables/`, with its status in that folder's `INDEX.md`.
 
 ## Unchanged by this delegation
 

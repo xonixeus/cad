@@ -3,7 +3,7 @@
 - **Target:** <Employer>, <Position> (<posting URL>)
 - **Source base:** <base name and version, or "built from ledger">
 - **Ledger reviewed:** <date>
-- **Version / status:** <vX.Y> / <DRAFT | PENDING_VERIFICATION | READY_FOR_REVIEW>
+- **Version / status:** <vN> / <DRAFT | PENDING_VERIFICATION | READY_FOR_REVIEW>
 
 ## Changes from the base
 - …

@@ -1,7 +1,7 @@
 # Review record — <filename>
 
 - **Decision:** APPROVED_FOR_USE (under delegation) | READY_FOR_REVIEW (for the client) | Returned to Scribe
-- **Version / status:** <vX.Y> / <status>
+- **Version / status:** <vN> / <status>
 - **Reviewed:** <date> by Maestro
 
 ## Checks
@@ -9,7 +9,7 @@
 | --- | --- | --- |
 | 1 | Deliverable and notes retrieved from the issue | |
 | 2 | PDF and editable source attached | |
-| 3 | Filename, version, status follow conventions | |
+| 3 | Folder, filename and version follow conventions | |
 | 4 | Matches the assignment and the posting | |
 | 5 | Claim map: every statement → Verified, Use Resume ID, within Limits | |
 | 6 | No unsupported qualification, accomplishment or metric | |
@@ -27,4 +27,4 @@
 - …
 
 ## Commit
-<link, when accepted>
+<link, when accepted; INDEX.md updated>

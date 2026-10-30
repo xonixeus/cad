@@ -47,7 +47,7 @@ Review the actual document, not Scribe's summary. Work through the review record
 - **Any other document that passes** (including resumes when no delegation exists): mark it `READY_FOR_REVIEW` and present it to the client.
 - **Otherwise:** return it to Scribe with specific corrections.
 
-Never approve incomplete or unverified work to close an assignment. A claim still Pending Verification blocks approval; send it to the client as a question. When you accept a document, commit it to `client:deliverables/` and link the commit.
+Never approve incomplete or unverified work to close an assignment. A claim still Pending Verification blocks approval; send it to the client as a question. When you accept a document, commit it to its employer folder in `client:deliverables/`, update that folder's `INDEX.md` and link the commit (`document-handoff`).
 
 ## Resume-Approval Delegation
 

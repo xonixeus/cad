@@ -2,6 +2,14 @@
 
 Changes to the universal department (`cad`): charter, agent instructions, environment, setup guide and client template. Newest first. Each client's own changes are logged in that client's `governance/CHANGELOG.md`.
 
+## v5.3 — 2026-10-30 — Shorter document names
+
+| Change | Files |
+| --- | --- |
+| Documents are filed in one folder per employer: `deliverables/<Employer>/<Position>_<CODE>_v<N>.<ext>`, with codes `RES`, `CL`, `ANS` and `LI`, and whole-number versions. Base resumes are `deliverables/base/<Track>_RES_v<N>.<ext>`. Replaces `Employer_Position_DocumentType_vX.Y_STATUS` and the `resumes/` folder | `skills/document-handoff/SKILL.md`, `templates/client/deliverables/` |
+| The status is no longer part of the filename. Maestro records it in a new `INDEX.md` in each employer folder | `skills/document-handoff/SKILL.md`, `skills/document-handoff/templates/index.md`, `agents/maestro/AGENTS.md` |
+| Templates and the delegation template use the new folder and version format | `skills/document-handoff/templates/review-record.md`, `skills/resume-writing/templates/tailoring-note.md`, `templates/client/governance/DELEGATION_RESUME_APPROVAL.md` |
+
 ## v5.2 — 2026-10-30 — PDF toolchain and report delivery
 
 | Change | Files |
