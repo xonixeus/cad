@@ -31,7 +31,37 @@ Create the four agents and paste the **entire** contents of each file into its I
 
 Each file tells its agent to read `TEAM.md` from `cad` first, so the charter does not need to be pasted. When you change `TEAM.md` or an `AGENTS.md`, paste the new version into that agent's Instructions field.
 
-### A4. Git credentials
+### A4. Skills
+
+Import each folder in `skills/` as a workspace skill, from its GitHub URL, then attach it to the agents marked below:
+
+```
+multica skill import --url https://github.com/<owner>/cad/tree/main/skills/<name>
+multica agent skills add <agent-id> --skill-ids <skill-id>,<skill-id>,…
+```
+
+| Skill | Sherlock | Watson | Scribe | Maestro |
+| --- | :-: | :-: | :-: | :-: |
+| `claims-ledger` | ✓ | ✓ | ✓ | ✓ |
+| `research-methods` | ✓ | ✓ | | |
+| `job-posting-analysis` | ✓ | ✓ | ✓ | |
+| `company-research` | | ✓ | ✓ | |
+| `opportunity-assessment` | ✓ | ✓ | | ✓ |
+| `profile-alignment` | | ✓ | ✓ | |
+| `market-signals` | ✓ | ✓ | | |
+| `resume-writing` | | | ✓ | ✓ |
+| `resume-pdf` | | | ✓ | ✓ |
+| `cover-letter-and-answers` | | ✓ | ✓ | |
+| `linkedin-content` | | ✓ | ✓ | |
+| `document-handoff` | | | ✓ | ✓ |
+| `interview-and-offer-prep` | | ✓ | | |
+| `client-repo-maintenance` | | | | ✓ |
+
+When you change a skill in `cad`, run `multica skill refresh <skill-id>` (or **Update** on the skill page). Agent assignments are kept. Give temporary specialists only the skills their task needs.
+
+**Check:** each agent's **Skills** tab lists its skills.
+
+### A5. Git credentials
 
 - **Read access (all agents):** the runtime's git credentials must be able to read every client repository. For example, one read-only deploy key per client repository, or a read-only token.
 - **Push access (Maestro only):** give only Maestro a credential that can push to client repositories, for example a fine-grained GitHub token with **Contents: Read and write** on the client repositories, stored in Maestro's agent environment variables (for example `GH_TOKEN`) and supplied to git by a credential helper. Never give Maestro push access to `cad`.
@@ -95,6 +125,6 @@ Create one issue per agent in the client's project:
 
 **Sherlock, Watson and Scribe (same text for each):**
 
-> Deployment check (read-only). Confirm you can read `cad:TEAM.md`, your own instructions in `cad:agents/`, `client:CLIENT.md` and `client:knowledge/CLAIMS_LEDGER.md`. Quote one line from each. State in two sentences what your role does and what you must never do. Scribe only: also confirm whether Liberation Sans and `pdffonts` are available in your runtime. Make no changes.
+> Deployment check (read-only). Confirm you can read `cad:TEAM.md`, your own instructions in `cad:agents/`, `client:CLIENT.md` and `client:knowledge/CLAIMS_LEDGER.md`. Quote one line from each. List the skills available to you. State in two sentences what your role does and what you must never do. Scribe only: also confirm whether Liberation Sans and the poppler tools are available in your runtime (run the `resume-pdf` skill's `check_pdf.sh` with no arguments; it reports missing tools). Make no changes.
 
 **Check:** all four quote real lines from the right client's files, and Maestro's commit appears in the client repository.

@@ -15,10 +15,31 @@ The department prepares materials and advice. It never applies, contacts employe
 
 The department and the people it serves are kept in separate repositories:
 
-- **`cad` (this repository, public):** the charter every agent follows (`TEAM.md`), each agent's instructions (`agents/`), the environment and setup guides, and a template for client repositories. It contains no personal data.
+- **`cad` (this repository, public):** the charter every agent follows (`TEAM.md`), each agent's role (`agents/`), reusable skills shared between agents (`skills/`), the environment and setup guides, and a template for client repositories. It contains no personal data.
 - **One private client repository per person** (for example `cad-alex`), created from `templates/client/`: their verified career facts (a claims ledger), objectives, preferences, target companies, owner profile, opportunity pipeline and accepted documents.
 
 Each client gets a Multica project linked to both repositories, so the same agents tailor their work to whoever the project is for, and never mix clients.
+
+The work is modular. The charter holds the rules that always apply, each `AGENTS.md` holds one role's responsibilities and judgment, and each skill holds one reusable method — with templates and scripts where useful — that several agents can load:
+
+| Skill | Purpose |
+| --- | --- |
+| `claims-ledger` | Read, cite and propose changes to the client's verified career facts |
+| `research-methods` | Reliable sourcing, verification, coverage and honest reporting |
+| `job-posting-analysis` | One structured reading of a posting, including culture and values signals |
+| `company-research` | A sourced brief on an employer |
+| `opportunity-assessment` | Constraints, fit, alignment, pay, and a consistent rating |
+| `profile-alignment` | Connect the client's values and work style to a role, truthfully |
+| `market-signals` | Track what the market asks for and turn it into development advice |
+| `resume-writing` | Bases, tailoring, content standards, the claim map |
+| `resume-pdf` | ATS-safe layout, PDF production, and a validation script |
+| `cover-letter-and-answers` | Employer-specific letters and application answers |
+| `linkedin-content` | Profile sections and posts that follow the positioning |
+| `document-handoff` | Naming, versions, statuses, handoff and review records |
+| `interview-and-offer-prep` | Interview packs and negotiation briefs |
+| `client-repo-maintenance` | Safe commits to client repositories and general-terms proposals for `cad` |
+
+Skills follow the standard `SKILL.md` format, so they can also be used outside CAD.
 
 Principles that run through everything:
 
@@ -28,13 +49,14 @@ Principles that run through everything:
 
 ## Get started
 
-Read [`docs/SETUP.md`](docs/SETUP.md). In short: set up a Multica runtime, create the four agents from `agents/`, create a private client repository from `templates/client/`, link both repositories to a project, and run the deployment checks.
+Read [`docs/SETUP.md`](docs/SETUP.md). In short: set up a Multica runtime, create the four agents from `agents/`, import the skills from `skills/` and attach them, create a private client repository from `templates/client/`, link both repositories to a project, and run the deployment checks.
 
 ## Repository layout
 
 ```
 TEAM.md                     Shared operating charter
 agents/<name>/AGENTS.md     Role instructions (paste into each Multica agent)
+skills/<name>/SKILL.md      Reusable skills (import into Multica, attach to agents)
 governance/ENVIRONMENT.md   Platform, repository layout, tools and fonts
 governance/CHANGELOG.md     Changes to the department
 docs/SETUP.md               Setup and onboarding guide for the operator

@@ -2,6 +2,19 @@
 
 Changes to the universal department (`cad`): charter, agent instructions, environment, setup guide and client template. Newest first. Each client's own changes are logged in that client's `governance/CHANGELOG.md`.
 
+## v5.1 — 2026-10-30 — Modular skills
+
+Reusable methods moved out of agent instructions into 14 skills that several agents can share.
+
+| Change | Files |
+| --- | --- |
+| New skills: `claims-ledger`, `research-methods`, `job-posting-analysis`, `company-research`, `opportunity-assessment`, `profile-alignment`, `market-signals`, `resume-writing`, `resume-pdf`, `cover-letter-and-answers`, `linkedin-content`, `document-handoff`, `interview-and-offer-prep`, `client-repo-maintenance`, with templates and a PDF check script | `skills/` |
+| New capabilities: posting analysis with culture and values signals, employer briefs, profile alignment, cover letter and LinkedIn methods, review record, `check_pdf.sh` | `skills/` |
+| Agent instructions slimmed to role, judgment and a "Skills you use" table; procedures now live in skills (content unchanged unless noted above) | `agents/*/AGENTS.md` |
+| Charter v5.1: skills defined; `cad` holds skills; proposals may cover skills and templates | `TEAM.md` |
+| Skills in the platform table, `pdfinfo` added to tools | `governance/ENVIRONMENT.md` |
+| Skill import and assignment step (A4) | `docs/SETUP.md` |
+
 ## v5.0 — 2026-10-30 — Universal department
 
 The department now serves any number of clients, each with a private client repository, instead of one owner.

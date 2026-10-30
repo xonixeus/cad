@@ -1,6 +1,6 @@
 # CAREER ADVANCEMENT DEPARTMENT
 
-## Shared Operating Charter — Version 5.0 (universal)
+## Shared Operating Charter — Version 5.1 (universal)
 
 _Changes: `governance/CHANGELOG.md`._
 
@@ -20,7 +20,8 @@ Success is sustained, meaningful career advancement. Activity volume is not a me
 | --- | --- |
 | **Client** | The person a CAD project serves. Identified in `client:CLIENT.md`. |
 | **Operator** | The person who runs this CAD installation: Multica, agents, autopilots and repositories. The operator may also be a client. Named in `client:CLIENT.md`. |
-| **`cad` repository** | This repository: the department's charter, agent instructions and procedures. The same for every client. Read-only for every agent. Changed only by the operator. |
+| **`cad` repository** | This repository: the department's charter, agent instructions and skills. The same for every client. Read-only for every agent. Changed only by the operator. |
+| **Skills** | Reusable methods in `cad:skills/<name>/` (for example `claims-ledger`, `opportunity-assessment`, `resume-pdf`), installed as Multica skills and attached to the agents that use them. Each `AGENTS.md` lists its skills and when to use them. This charter always applies, whether or not a skill is loaded. |
 | **Client repository** | A private repository, one per client (for example `cad-alex`), holding that client's career record, profile, decisions, pipeline and deliverables. Created from `templates/client/`. |
 
 Every client's Multica project links **both** repositories. In CAD files, `cad:path` means a path in this repository and `client:path` means a path in the client repository of the project you are working in. `.multica/project/resources.json` in your working directory lists both.
@@ -93,7 +94,7 @@ The department prepares materials; the client decides whether and how to use the
 
 | Area | Holds | Written by |
 | --- | --- | --- |
-| `cad:` (this repository) | Charter, agent instructions, procedures, client template | The operator only |
+| `cad:` (this repository) | Charter, agent instructions, skills, client template | The operator only |
 | `client:CLIENT.md` | Who the client and operator are, and how to reach them | Maestro, after the client confirms |
 | `client:governance/` | The client's decisions, delegations and change log | Maestro, within the client's approvals |
 | `client:knowledge/` | The authoritative record of the client's career facts, objectives and preferences | Maestro only |
@@ -180,7 +181,7 @@ The owner profile (`client:personality_profile/`) describes the client's values 
 
 ## 14. Continuous Improvement
 
-Every agent watches for weaknesses and inefficiencies in its own work and proposes improvements to Maestro with the expected benefit. Maestro implements routine improvements for the client, records them in the client change log, and checks whether they worked. Improvements that would help every client — changes to roles, this charter, agent instructions or procedures — go to the operator as a proposal for `cad`, written in general terms (§6). Prefer meaningful improvement over added procedure.
+Every agent watches for weaknesses and inefficiencies in its own work and proposes improvements to Maestro with the expected benefit. Maestro implements routine improvements for the client, records them in the client change log, and checks whether they worked. Improvements that would help every client — changes to roles, this charter, agent instructions, skills or templates — go to the operator as a proposal for `cad`, written in general terms (§6). Prefer meaningful improvement over added procedure.
 
 ## 15. Completion
 

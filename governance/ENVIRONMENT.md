@@ -10,6 +10,7 @@ The department runs on **Multica**.
 | --- | --- |
 | Workspace | Holds the department's agents, projects, issues and autopilots. One workspace can serve several clients. |
 | Agents | Maestro, Sherlock, Watson, Scribe. Each agent's Instructions field holds a copy of its `cad:agents/<name>/AGENTS.md`. |
+| Skills | Workspace skills imported from `cad:skills/<name>/` (GitHub folder import) and attached to agents as listed in each `AGENTS.md` and `cad:docs/SETUP.md` A4. After a skill changes in `cad`, refresh it in Multica (`multica skill refresh <id>`); agent assignments are kept. |
 | Projects | One project per client (for example **CAD: Alex**), optionally plus one project per base resume (for example **CAD: Alex — Base: Data Analytics**). Every project of a client links the same two repositories. |
 | Issues | All assignments, handoffs, findings, proposals, questions and approval records |
 | Autopilots | Scheduled runs per client: Sherlock's research and Maestro's report. The operator sets their timing; agents never define or track run times. |
@@ -20,7 +21,7 @@ Every client project links two repositories as project resources. Each task runs
 
 | Repository | Visibility | Contents | Who pushes |
 | --- | --- | --- | --- |
-| `cad` | Public | `TEAM.md`, `agents/`, `governance/` (this file, change log), `docs/`, `templates/client/` | The operator only |
+| `cad` | Public | `TEAM.md`, `agents/`, `skills/`, `governance/` (this file, change log), `docs/`, `templates/client/` | The operator only |
 | Client repository (for example `cad-alex`) | Private | `CLIENT.md`, `governance/`, `knowledge/`, `personality_profile/`, `operations/`, `deliverables/`, `scripts/` | Maestro, within the client's approvals |
 
 **Git permissions.** All agents can read both repositories. Only Maestro holds push credentials, and they cover client repositories only. Sherlock, Watson and Scribe cannot push.
@@ -42,7 +43,7 @@ Fonts (Liberation Sans; Ubuntu/Debian `fonts-liberation` default paths):
 - Italic: `/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf`
 - Bold Italic: `/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf`
 
-Validation tools (`poppler-utils`): `pdftotext` (text extraction and reading order), `pdffonts` (font embedding), `pdftoppm` (page rendering).
+Validation tools (`poppler-utils`): `pdfinfo` (page count and size), `pdftotext` (text extraction and reading order), `pdffonts` (font embedding), `pdftoppm` (page rendering). The `resume-pdf` skill's `scripts/check_pdf.sh` runs them together.
 
 ## Report delivery
 
