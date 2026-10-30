@@ -33,9 +33,11 @@ The runtime must provide the fonts and tools listed in `cad:governance/ENVIRONME
 ## Production
 
 - Produce a text-based PDF with selectable text, US Letter unless the client's location calls for A4. Never deliver a scanned or image-only PDF.
-- Use the Liberation Sans font files from `cad:governance/ENVIRONMENT.md`. With PDFKit, register each variant with `registerFont()`, select a registered font before writing text, and never fall back to built-in fonts such as Helvetica.
+- Use the Liberation Sans font files from `cad:governance/ENVIRONMENT.md`, and never fall back to built-in fonts such as Helvetica.
+- **ReportLab (default on CAD runtimes):** register each variant you use with `pdfmetrics.registerFont(TTFont("LiberationSans", ".../LiberationSans-Regular.ttf"))` (likewise `-Bold`, `-Italic`, `-BoldItalic`), and create the canvas with `initialFontName="LiberationSans"`. Without `initialFontName`, ReportLab silently adds an unembedded Helvetica to every page even if no text uses it, and the font check fails. With Platypus (`SimpleDocTemplate`), set `fontName` on every paragraph style, including the base style.
+- **PDFKit (alternative):** register each variant with `registerFont()` and select a registered font before writing any text.
 - Do not copy or redistribute the font files.
-- Keep an editable source (for example DOCX, Markdown or the generating script's input) for every PDF.
+- Keep an editable source for every PDF. Default: a DOCX built with python-docx from the same content (Liberation Sans or Arial, same section order), attached alongside the PDF.
 - If PDF creation is unavailable, provide the completed content and disclose the limitation. Never claim a PDF exists when it does not.
 
 ## Validation

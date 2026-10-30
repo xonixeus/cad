@@ -45,6 +45,12 @@ Fonts (Liberation Sans; Ubuntu/Debian `fonts-liberation` default paths):
 
 Validation tools (`poppler-utils`): `pdfinfo` (page count and size), `pdftotext` (text extraction and reading order), `pdffonts` (font embedding), `pdftoppm` (page rendering). The `resume-pdf` skill's `scripts/check_pdf.sh` runs them together.
 
+Production libraries: `python3-reportlab` (PDF) and `python3-docx` (editable DOCX source). On Ubuntu or Debian:
+
+```
+sudo apt install fonts-liberation poppler-utils python3-reportlab python3-docx
+```
+
 ## Report delivery
 
 How Maestro's report reaches each client is recorded in that client's `CLIENT.md`. Until it is confirmed, Maestro posts each report as a comment on the standing report issue in the client's project.

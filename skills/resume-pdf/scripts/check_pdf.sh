@@ -15,9 +15,10 @@ missing=0
 for tool in pdfinfo pdftotext pdffonts pdftoppm; do
   command -v "$tool" >/dev/null 2>&1 || { echo "MISSING TOOL: $tool (install poppler-utils)" >&2; missing=1; }
 done
-if ! fc-list 2>/dev/null | grep -q 'LiberationSans'; then
-  echo "MISSING FONT: Liberation Sans (install fonts-liberation)" >&2; missing=1
-fi
+font_dir=${LIBERATION_DIR:-/usr/share/fonts/truetype/liberation}
+for variant in Regular Bold Italic BoldItalic; do
+  [ -f "$font_dir/LiberationSans-$variant.ttf" ] || { echo "MISSING FONT: $font_dir/LiberationSans-$variant.ttf (install fonts-liberation, or set LIBERATION_DIR)" >&2; missing=1; }
+done
 [ "$missing" -eq 0 ] || exit 2
 if [ -z "$pdf" ] || [ ! -f "$pdf" ]; then
   echo "tools and fonts OK" >&2
@@ -33,7 +34,7 @@ flag() { echo "FAIL  $*"; fail=1; }
 
 # Page count and size
 pages=$(pdfinfo "$pdf" | awk -F: '/^Pages:/ {gsub(/ /, "", $2); print $2}')
-size=$(pdfinfo "$pdf" | awk -F': *' '/^Page size:/ {print $2}')
+size=$(pdfinfo "$pdf" | awk -F': *' '/^Page size:/ {print $2}' | sed 's/ *(.*)$//')
 if [ -n "$pages" ] && [ "$pages" -le "$max_pages" ]; then pass "pages: $pages (max $max_pages)"; else flag "pages: ${pages:-unknown} (max $max_pages)"; fi
 case "$paper" in
   letter) expect="612 x 792" ;;

@@ -6,13 +6,13 @@
 
 ### A1. Runtime
 
-Run the agents on a Multica runtime that supports per-agent environment variables and the `multica` CLI inside tasks (Claude Code works). Scribe also needs Liberation Sans fonts and the poppler PDF tools. On Ubuntu or Debian:
+Run the agents on a Multica runtime that supports per-agent environment variables and the `multica` CLI inside tasks (Claude Code works). Scribe also needs Liberation Sans fonts, the poppler PDF tools, and ReportLab and python-docx to produce documents. On Ubuntu or Debian:
 
 ```
-sudo apt install fonts-liberation poppler-utils
+sudo apt install fonts-liberation poppler-utils python3-reportlab python3-docx
 ```
 
-**Check:** `pdffonts -v` prints a version, and `ls /usr/share/fonts/truetype/liberation/` lists the LiberationSans files.
+**Check:** the `resume-pdf` skill's `scripts/check_pdf.sh`, run with no arguments, prints "tools and fonts OK"; `python3 -c "import reportlab, docx"` succeeds.
 
 ### A2. The `cad` repository
 

@@ -2,6 +2,14 @@
 
 Changes to the universal department (`cad`): charter, agent instructions, environment, setup guide and client template. Newest first. Each client's own changes are logged in that client's `governance/CHANGELOG.md`.
 
+## v5.2 — 2026-10-30 — PDF toolchain and report delivery
+
+| Change | Files |
+| --- | --- |
+| ReportLab is the default PDF library, with python-docx for the editable DOCX source. Documents the `initialFontName` requirement (otherwise ReportLab adds an unembedded Helvetica to every page); PDFKit remains an alternative | `skills/resume-pdf/SKILL.md`, `governance/ENVIRONMENT.md`, `docs/SETUP.md` |
+| `check_pdf.sh` checks for the Liberation Sans font files directly (no fontconfig needed) and prints a cleaner page size; tested on Ubuntu 26.04 with passing and failing PDFs | `skills/resume-pdf/scripts/check_pdf.sh` |
+| Charter v5.2: delivering reports and documents to the client by the method in `CLIENT.md` is internal delivery, never to anyone else | `TEAM.md` §6 |
+
 ## v5.1 — 2026-10-30 — Modular skills
 
 Reusable methods moved out of agent instructions into 14 skills that several agents can share.
