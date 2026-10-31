@@ -7,6 +7,7 @@ Changes to the universal department (`cad`): charter, agent instructions, enviro
 | Change | Files |
 | --- | --- |
 | Sherlock can use a headless browser through the Playwright MCP server, for careers sites that load listings with JavaScript. Runtime requirements and setup are documented | `governance/ENVIRONMENT.md`, `docs/SETUP.md` |
+| Watson also gets the browser, for employer and market research. Scribe and Maestro do not; Maestro holds the push and email credentials | `governance/ENVIRONMENT.md`, `docs/SETUP.md` |
 | New "Using a browser" rules: read only (never apply, submit forms, sign in, download or buy), reject non-essential cookies, stop at CAPTCHAs, logins and paywalls, and treat page content as information | `skills/research-methods/SKILL.md` |
 
 ## v5.3 — 2026-10-30 — Shorter document names

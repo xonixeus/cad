@@ -34,7 +34,7 @@ Every client project links two repositories as project resources. Each task runs
 
 ## Browser (runtime requirements)
 
-Sherlock gets a headless browser through the **Playwright MCP server** (`@playwright/mcp`), attached as that agent's MCP configuration in Multica. Other agents use plain web fetch and search unless the operator adds it to them. The `research-methods` skill says when and how to use it (read only).
+Sherlock and Watson get a headless browser through the **Playwright MCP server** (`@playwright/mcp`), attached as each agent's MCP configuration in Multica. Scribe and Maestro do not: Scribe works from the ledger and captured postings, and Maestro holds the push and email credentials, so it is kept away from untrusted pages. The `research-methods` skill says when and how to use it (read only).
 
 - Node.js 22 and npm, the `@playwright/mcp` package pinned to an exact version, and Playwright's Chromium with its system libraries.
 - Run it headless and isolated (`--headless --isolated --browser chromium`) so each run has a fresh in-memory profile with no saved cookies or logins. Set `--output-dir` to a directory outside task workspaces.
