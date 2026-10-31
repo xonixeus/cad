@@ -14,6 +14,28 @@ sudo apt install fonts-liberation poppler-utils python3-reportlab python3-docx
 
 **Check:** the `resume-pdf` skill's `scripts/check_pdf.sh`, run with no arguments, prints "tools and fonts OK"; `python3 -c "import reportlab, docx"` succeeds.
 
+**Browser for Sherlock (recommended).** Many careers sites load their listings with JavaScript, which plain web fetch cannot read. As the user the daemon runs as, install the Playwright MCP server at a pinned version and its Chromium; install Chromium's system libraries with sudo:
+
+```
+sudo apt install nodejs npm
+mkdir -p ~/.local/share/playwright-mcp && cd ~/.local/share/playwright-mcp
+npm init -y && npm install --save-exact @playwright/mcp@<version>
+sudo node_modules/.bin/playwright install-deps chromium
+node_modules/.bin/playwright install chromium
+```
+
+Then attach it to Sherlock from a JSON file (mode 0600):
+
+```json
+{"mcpServers":{"playwright":{"command":"<home>/.local/share/playwright-mcp/node_modules/.bin/playwright-mcp","args":["--headless","--isolated","--browser","chromium","--output-dir","<home>/.cache/playwright-mcp-output"]}}}
+```
+
+```
+multica agent update <sherlock-id> --mcp-config-file sherlock-mcp.json
+```
+
+**Check:** an issue asking Sherlock to list its `mcp__playwright` tools and open a JavaScript-rendered careers board returns the board's real role titles.
+
 ### A2. The `cad` repository
 
 Fork or copy this repository. Register it in Multica (**Settings → Code**). If it is public, agents can read it without credentials.
