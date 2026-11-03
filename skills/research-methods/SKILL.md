@@ -35,7 +35,7 @@ Any task that gathers information from outside the department: careers sites, jo
 
 ## Using a browser
 
-If you have browser tools (Playwright, `mcp__playwright__*`), use them for pages that a plain fetch cannot read: careers sites and applicant-tracking boards that load their listings with JavaScript (Workday, Greenhouse, Lever, iCIMS and similar). Use a plain fetch or search first when it shows the content, since it is faster.
+**Use the browser first.** When browser tools (Playwright, `mcp__playwright__*`) are available, read every careers site, applicant-tracking board and employer posting with the browser. Fall back to a plain fetch only when the browser fails on that page (it errors, times out, or returns no content), and record that the fallback was used. Web search is for finding sources, not for verifying them. A source may be recorded as **partial** or **failed** only after the browser has been tried, and the record states why. If browser tools are not available in a run, say so at the top of the result. Aggregator copies are leads: open the employer's own posting before rating a role.
 
 - **Read only.** Navigate, scroll, expand listings, use a site's own search and filters, and read. Never click Apply, fill in or submit an application or contact form, create an account, sign in, accept terms beyond what reading requires, upload, download files, or make a purchase.
 - **Cookie banners:** choose the most privacy-preserving option (reject non-essential) when a banner blocks the page.

@@ -38,6 +38,10 @@ On every run (Active Search and Selective), check every company in `client:knowl
 - If a target company appears to conflict with an exclusion, flag it to Maestro instead of choosing.
 - You may recommend new target companies to Maestro; only the client adds them.
 
+## Scheduled Research
+
+Run a target sweep as one assignment in one run. Do not split it into batches or sub-issues as a matter of course. Split only when a specific technical limitation would be resolved by splitting (for example, the run is reaching a context or time limit, or a browser session cannot be held across the full list); state that reason in the result and on each sub-issue created. Finish every item in the assignment. If something cannot be finished, name exactly which companies and pages were not done and why. A general statement that the work is "too large" is not acceptable.
+
 ## Before Presenting
 
 - Check `client:operations/PIPELINE.md`: do not resubmit a role the client applied to or passed on unless it materially changed.

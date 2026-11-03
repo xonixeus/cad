@@ -132,7 +132,7 @@ Create two autopilots for the client. You set the schedules; agents never define
 
 **Research** — agent Sherlock, the client's project. Prompt:
 
-> Run your scheduled opportunity research as defined in your instructions and TEAM.md for the client of this project. Check the current operating mode first. Post your results on a new issue in this project titled with today's date: target-company coverage (complete, partial or failed for each company), each Top-tier or Qualified opportunity with its handoff details, and any blockers. If the run could not be completed, say so plainly.
+> Run your scheduled opportunity research as defined in your instructions and TEAM.md for the client of this project. Check the current operating mode first. Use the browser for every careers site and posting (`research-methods`). Post your results on a new issue in this project titled with today's date: target-company coverage (complete, partial or failed for each company), each Top-tier or Qualified opportunity with its handoff details, and any blockers. If the run could not be completed, say so plainly.
 
 **Report** — agent Maestro, the client's project. Prompt:
 
