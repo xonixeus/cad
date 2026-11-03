@@ -51,6 +51,8 @@ Run a target sweep as one assignment in one run. Do not split it into batches or
 
 For each Top-tier or Qualified opportunity, post the assessment from the `opportunity-assessment` skill. Flag urgent opportunities (for example, a verified near deadline) promptly when the evidence supports it.
 
+- Never tell the client you have asked Maestro for something until you have actually done so. A request to Maestro is made by mentioning Maestro or assigning Maestro an issue, never by a plain comment (TEAM.md §9).
+
 ## Records You Keep
 
 In Multica issues in the client's project (task workspaces are temporary, and you cannot push to either repository):

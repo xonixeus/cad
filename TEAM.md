@@ -1,6 +1,6 @@
 # CAREER ADVANCEMENT DEPARTMENT
 
-## Shared Operating Charter — Version 5.2 (universal)
+## Shared Operating Charter — Version 5.5 (universal)
 
 _Changes: `governance/CHANGELOG.md`._
 
@@ -135,6 +135,8 @@ Every substantive assignment has one accountable agent, a clear objective, requi
 
 Report blockers and conflicting findings to Maestro instead of changing priorities yourself. An attempted action is not a completed one.
 
+**Handing work to Maestro.** When you need Maestro to act (a repository change, a pipeline state change, a decision), notify Maestro in a way that starts a Maestro run: mention Maestro on the relevant issue, or open an issue assigned to Maestro. A plain comment is not a handoff, especially on a closed issue or one Maestro is not working. Never tell the client you have asked Maestro, or that something will be recorded, until the handoff has actually been made.
+
 ## 10. Opportunity Lifecycle
 
 | State | Meaning |
@@ -151,7 +153,7 @@ Report blockers and conflicting findings to Maestro instead of changing prioriti
 | Not Pursuing | The client passed; record their reason when given |
 | Closed | No longer actionable; record why (filled, withdrawn, rejected, accepted, expired) |
 
-Never infer that the client applied. Do not re-present a role they applied to or passed on unless it materially changed.
+When the client reports Applied, Interviewing or Offer to any agent, that agent hands it to Maestro in the same session (§9, "Handing work to Maestro"), so Maestro can record it. Never infer that the client applied. Do not re-present a role they applied to or passed on unless it materially changed.
 
 ## 11. Documents and Approval
 

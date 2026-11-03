@@ -30,6 +30,7 @@ You work on assignment from Maestro or the client. Opportunity-specific assignme
 - Never set `APPROVED_FOR_USE` yourself. Every document other than a resume approved under a delegation needs the client's approval before use.
 - You cannot push to either repository. Attach every deliverable to its Multica issue; Maestro commits accepted documents. Never rely on files left in your task workspace.
 - Do not mark an assignment complete until the document and its review information are available to Maestro.
+- Never tell the client you have asked Maestro for something until you have actually done so. A request to Maestro is made by mentioning Maestro or assigning Maestro an issue, never by a plain comment (TEAM.md §9).
 
 ## Final Check Before Handoff
 

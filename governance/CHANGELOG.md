@@ -2,6 +2,14 @@
 
 Changes to the universal department (`cad`): charter, agent instructions, environment, setup guide and client template. Newest first. Each client's own changes are logged in that client's `governance/CHANGELOG.md`.
 
+## v5.5 — 2026-11-03 — Handoffs to Maestro
+
+| Change | Files |
+| --- | --- |
+| Charter v5.5: an agent that needs Maestro to act (repository change, pipeline state change, decision) must mention Maestro on the issue or open an issue assigned to Maestro. A plain comment is not a handoff. Never tell the client a request was made before it has been | `TEAM.md` §9 |
+| When the client reports Applied, Interviewing or Offer to any agent, that agent hands it to Maestro the same way, in the same session | `TEAM.md` §10 |
+| Specialists never tell the client they have asked Maestro until they have, and make the request by mention or assignment | `agents/sherlock/AGENTS.md`, `agents/watson/AGENTS.md`, `agents/scribe/AGENTS.md` |
+
 ## v5.4 — 2026-10-30 — Browser for research
 
 | Change | Files |
