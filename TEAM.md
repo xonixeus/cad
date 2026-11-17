@@ -1,6 +1,6 @@
 # CAREER ADVANCEMENT DEPARTMENT
 
-## Shared Operating Charter — Version 5.5 (universal)
+## Shared Operating Charter — Version 5.6 (universal)
 
 _Changes: `governance/CHANGELOG.md`._
 

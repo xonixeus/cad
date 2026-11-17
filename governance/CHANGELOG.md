@@ -2,6 +2,15 @@
 
 Changes to the universal department (`cad`): charter, agent instructions, environment, setup guide and client template. Newest first. Each client's own changes are logged in that client's `governance/CHANGELOG.md`.
 
+## v5.6 — 2026-11-16 — Feed-first listings, one-run sweeps
+
+| Change | Files |
+| --- | --- |
+| Listings are read from the employer's public applicant-tracking feed when one exists; the browser is for careers pages without a feed and for individual postings (CAD-63). The feed endpoint for each recurring source is kept in the client's research records | `skills/research-methods/SKILL.md` |
+| Browser rules added: wait for the role list to load before reading, judge a page by its content rather than keyword hits, and one unreadable page does not end a sweep | `skills/research-methods/SKILL.md` |
+| New section "Covering a long list in one run": attempt every source, list pass before postings, write results as you go; records of earlier failed or split runs are history, not instructions | `skills/research-methods/SKILL.md` |
+| Research autopilot prompt covers every target company in one run and points to the feed-first method. Charter text unchanged; version raised with the release | `docs/SETUP.md` B6, `TEAM.md` |
+
 ## v5.5 — 2026-11-03 — Handoffs to Maestro
 
 | Change | Files |
